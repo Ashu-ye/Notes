@@ -125,6 +125,30 @@ docker container prune
 docker stop container_name
 ```
 
+
+
+Clone an app from a Github repo inspect its Dockerfile,
+```
+cd ~
+git clone https://github.com/newdelthis/webappdemo.git
+```
+
+```
+cd webappdemo
+cat Dockerfile
+```
+
+```
+docker build -t test:1.0 .
+docker images
+```
+```
+docker runn -d --name web-1 -p 9999:8080 test:1.0   #on browser:- localhost:9999
+docker ps
+docker rmm web1 -f
+docker rmi test:1.0
+```
+
 ## How to build our own docker image
 
 1. Write your code in any language eg python, java, cpp etc
