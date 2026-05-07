@@ -1,0 +1,12 @@
+git log --oneline
+
+git revert HEAD
+
+ls
+
+git revert HEAD~2
+
+ls
+
+git log --oneline
+
