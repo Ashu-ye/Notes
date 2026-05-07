@@ -1,0 +1,27 @@
+mkdir my_project
+
+cd my_project
+
+git init
+
+echo "First change" > file.txt
+
+git add file.txt
+
+git commit -m "1st commit"
+
+echo "Third change" >> file.txt
+
+git commit -am "3rd commit"
+
+git log --oneline
+
+# This reverts everything between the 1st commit and the current state (HEAD)
+
+git revert <1st-commit-hash>..HEAD
+
+
+-----------------------------------
+# This permanently deletes the 2nd and 3rd commits
+git reset --hard <1st-commit-hash>
+
